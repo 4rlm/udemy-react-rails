@@ -2,11 +2,13 @@
 
 $ npm run start
 
+
 ## ABOUT
 react: javascript router
 redux: predictable state container
 webpack: task runner (like gulp, grunt)
 Webpack pipes code through babel, then compiles it.
+
 
 ## CREATE NEW APP
 ```
@@ -40,7 +42,7 @@ index.html (add basic html skeleton w/ div id='root' or id='root' in body. then 
 webpack.config.js (Tells webpack where to look for files, what to do with files, and where to send them.)
 
 
-## == ./webpack.config.js ==
+##  ./webpack.config.js
 
 ```
 module.exports = {
@@ -65,7 +67,7 @@ module.exports = {
 ```
 
 
-## == public/index.html ==
+##  public/index.html
 
 ```
 <!DOCTYPE html>
@@ -81,7 +83,7 @@ module.exports = {
 ```
 
 
-## == app/js/main.js ==
+##  app/js/main.js
 
 ```
 const app = document.getElementById('app');
@@ -90,7 +92,7 @@ app.innerHTML = "Hello ES6!"
 ```
 
 
-## == TEST ==
+## TEST
 
 ```
 $ ./node_modules/.bin/webpack
@@ -105,7 +107,7 @@ $ ./node_modules/.bin/webpack
 ```
 
 
-## == app/js/main.js ==
+##  app/js/main.js
 UPDATE MAIN.JS AS BELOW (then $ npm run start)
 
 ```
