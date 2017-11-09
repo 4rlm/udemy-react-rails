@@ -56,18 +56,22 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// ReactDom.render(
+	//   <p>Hello React.</p>,
+	//   document.getElementById('app')
+	// );
+
 	// const app = document.getElementById('app');
 	// app.innerHTML = "Hello ES6!"
 
-	_reactDom2.default.render(_react2.default.createElement(
-	  'p',
+	var hello = _react2.default.createElement(
+	  'h3',
 	  null,
-	  'Hello React.'
-	), _react2.default.createElement(
-	  'p',
-	  null,
-	  'I\'m another p!'
-	), document.getElementById('app'));
+	  'I\'m an H3!!!'
+	);
+
+	_reactDom2.default.render(hello, // pass const hello here, which renders in div id 'app' on index.html
+	document.getElementById('app'));
 
 /***/ }),
 /* 1 */
