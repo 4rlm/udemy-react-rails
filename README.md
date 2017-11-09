@@ -39,6 +39,7 @@ webpack.config.js (Tells webpack where to look for files, what to do with files,
 ============================
 == ./webpack.config.js ==
 
+'''
 module.exports = {
   entry: "./app/js/main.js",
   output: {
@@ -58,7 +59,7 @@ module.exports = {
     ]
   }
 }
-
+'''
 ============================
 == public/index.html ==
 
