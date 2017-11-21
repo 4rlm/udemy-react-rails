@@ -14,6 +14,14 @@ constructor() {}
 super();
 this.state = {}
 this.setState()
+handleClick
+onClick={}
+prevState
+this.setState(prevState =>
+
+this.handleClick = this.handleClick.bind
+<button onClick={this.handleClick.bind(this)}>Button</button
+
 
 'top level component' = component that owns the data.
 unidirectional data flow.  like a waterfall.  can't go back in direction
