@@ -26,7 +26,10 @@ this.handleClick = this.handleClick.bind
 'top level component' = component that owns the data.
 unidirectional data flow.  like a waterfall.  can't go back in direction
 
+lifecycle methods = componentDidMount() {}
 
+Tips:
+Remember unidirectional data flow when considering where the state will reside.  Need to have it in parent component.
 
 == Create Class ==
 

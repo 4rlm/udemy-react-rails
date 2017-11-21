@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { TimerHeader } from './Timer/TimerHeader';
+import TimerButton from './Timer/TimerButton';
+
 export default class Timer extends React.Component {
   constructor() {
     super()
@@ -9,19 +12,27 @@ export default class Timer extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
+  componentDidMount() {
+    this.timer = setInterval(
+      () => this.startTimer(),
+      1000)
+  }
+
+  startTimer() {
+    this.setState(prevState => ({
+      time: prevState.time += 1
+    }))
+  }
+
   handleClick() {
-    setInterval(() => {
-      this.setState(prevState => ({
-        time: prevState.time += 1
-      }))
-    }, 1000)
+    clearInterval(this.timer)
   }
 
   render() {
     return(
       <div>
-        <h3>I've been running for: {this.state.time} seconds</h3>
-        <button onClick={this.handleClick}>Click to Start</button>
+        <TimerHeader time={this.state.time} />
+        <TimerButton handleClick={this.handleClick} time={this.state.time}/>
       </div>
     )
   }
