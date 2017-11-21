@@ -10,10 +10,12 @@ export default class NameList extends React.Component {
 
   render() {
     const nameArray = ["Chris-DAWG", "Jane", "BillyBob", "JoeyJoeJoe", "Mary"];
+    const element = <p>I'm an element!!!!!</p>
+
     return (
       <div>
       <h3>I am number {this.props.number}</h3>
-        <Welcome firstName="Chris" lastName="Smith" originalPhrase={this.props.phrase}/>
+        <Welcome firstName="Chris" lastName="Smith" originalPhrase={this.props.phrase} element={element} />
         <ul>
           {this.nameMapper(nameArray)}
         </ul>
