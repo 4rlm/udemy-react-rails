@@ -46,6 +46,8 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -56,22 +58,78 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// ReactDom.render(
-	//   <p>Hello React.</p>,
-	//   document.getElementById('app')
-	// );
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	// const app = document.getElementById('app');
-	// app.innerHTML = "Hello ES6!"
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	var hello = _react2.default.createElement(
-	  'h3',
-	  null,
-	  'I\'m an H3!!!'
-	);
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	_reactDom2.default.render(hello, // pass const hello here, which renders in div id 'app' on index.html
-	document.getElementById('app'));
+	// VERSION 10 - REACT CLASSES (V1-9 IN 'MAIN_EXAMPLE_1.JS')
+	// VERY SIMPLE VERSION OF CLASS WITH ES6
+	var Welcome = function Welcome(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'h4',
+	      null,
+	      'Welcome to my site, ',
+	      props.firstName,
+	      '!'
+	    ),
+	    _react2.default.createElement(
+	      'h4',
+	      null,
+	      'Content: ',
+	      props.lastName
+	    )
+	  );
+	};
+
+	// CREATING CLASS VIA ES6
+
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
+
+	  function App() {
+	    _classCallCheck(this, App);
+
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	  }
+
+	  _createClass(App, [{
+	    key: 'nameMapper',
+	    value: function nameMapper(nameArray) {
+	      return nameArray.map(function (name, i) {
+	        return _react2.default.createElement(
+	          'li',
+	          { key: i },
+	          name
+	        );
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var nameArray = ["Chris", "Jane", "BillyBob", "JoeyJoeJoe", "Mary"];
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(Welcome, { firstName: 'Chris', lastName: 'Smith' }),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          this.nameMapper(nameArray)
+	        ),
+	        _react2.default.createElement(Welcome, { firstName: 'Jane', lastName: 'Doe' })
+	      );
+	    }
+	  }]);
+
+	  return App;
+	}(_react2.default.Component);
+
+	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
 
 /***/ }),
 /* 1 */
