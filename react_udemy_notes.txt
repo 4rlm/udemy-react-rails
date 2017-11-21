@@ -1,3 +1,63 @@
+==== React Notes ====
+
+import React from 'react';
+import ReactDom from 'react-dom';
+import Layout from './components/Layout';
+
+class App extends React.Component {}
+render() {}
+return ()
+ReactDom.render();
+
+.bind(this)
+constructor() {}
+super();
+this.state = {}
+this.setState()
+
+'top level component' = component that owns the data.
+unidirectional data flow.  like a waterfall.  can't go back in direction
+
+
+
+== Create Class ==
+
+import React from 'react';
+
+export default class Button extends React.components {
+  constructor() {
+    super()
+  }
+
+  render() {
+    return (
+      <button onClick={this.changeName.bind(this)}>Change me!</button>
+    )
+  }
+}
+
+== Render Class ==
+
+return(
+
+render() {
+  return (
+    <div>
+      <Button />  // Invoke a class like this.
+    </div>
+  )
+}
+
+=====
+=========================
+
+==== DEBUG / TOOLS ====
+console.log(this) // Check what 'this' is.  (refers to component itself.)
+Paint Flashing // From Chrome console, ..., More tools, Rendering, Paint Flashing
+
+
+=========================
+
 ==== to start =====
 
 $ npm run start (then open index.html in browser)
