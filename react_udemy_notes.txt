@@ -33,6 +33,9 @@ componentWillUnmount() {}
 
 Tips:
 Remember unidirectional data flow when considering where the state will reside.  Need to have it in parent component.
+backtip notation
+
+{JSON.stringify(this.state, null, 2)}
 
 == Create Class ==
 
