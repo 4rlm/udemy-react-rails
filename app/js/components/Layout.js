@@ -8,7 +8,8 @@ export default class Layout extends React.Component {
     super();
     this.state = {
       firstName: 'Chris',
-      lastName: 'Smith'
+      lastName: 'Smith',
+      isTimerMounted: true
     }
   }
 
@@ -16,6 +17,12 @@ export default class Layout extends React.Component {
     this.setState({
       firstName: 'Jane'
     })
+  }
+
+  toggleTimers() {
+    this.setState(prevState => ({
+      isTimerMounted: !prevState.isTimerMounted
+    }));
   }
 
   render() {
@@ -26,9 +33,18 @@ export default class Layout extends React.Component {
         <h1>{this.state.firstName}</h1>
         <Button firstName={this.state.firstName} changeName={this.changeName.bind(this)}/>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur temporibus distinctio deleniti.</p>
-        <Timer />
-        <Timer />
-        <Timer />
+
+        {this.state.isTimerMounted ?
+          <div>
+            <Timer />
+            <Timer />
+            <Timer />
+          </div>
+          : null
+        }
+
+        <button onClick={this.toggleTimers.bind(this)}>Toggle Timers</button>
+
       </div>
     )
   }

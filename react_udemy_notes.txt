@@ -26,7 +26,10 @@ this.handleClick = this.handleClick.bind
 'top level component' = component that owns the data.
 unidirectional data flow.  like a waterfall.  can't go back in direction
 
-lifecycle methods = componentDidMount() {}
+lifecycle methods:
+componentDidMount() {}
+componentWillUnmount() {}
+
 
 Tips:
 Remember unidirectional data flow when considering where the state will reside.  Need to have it in parent component.
@@ -69,8 +72,12 @@ Paint Flashing // From Chrome console, ..., More tools, Rendering, Paint Flashin
 
 =========================
 
-==== to start =====
 
+
+----- SETUP -----
+
+
+==== to start =====
 $ npm run start (then open index.html in browser)
 $ npm run serve (then visit http://localhost:8080/webpack-dev-server/index.html)
 
@@ -87,6 +94,7 @@ $ cd react-my-first-app
 $ npm init
 $ npm install webpack@1 webpack-dev-server@1 react react-dom
 $ npm install babel-loader@6.2.10 babel-core@6.21.0 babel-preset-es2015@6.18.0 babel-preset-react@6.16.0 --save-dev
+$ npm install react-hot-loader@1.3.1 --save-dev
 
 == CREATE DIRECTORIES AND FILES ==
 mkdir app
@@ -112,7 +120,7 @@ webpack.config.js (Tells webpack where to look for files, what to do with files,
 == ./webpack.config.js ==
 
 module.exports = {
-  entry: "./app/js/main.js",
+  entry: "./app/js/app.js",
   output: {
     path: __dirname + '/public',
     filename: 'bundle.js'
@@ -122,10 +130,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015']
-        }
+        loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015']
       }
     ]
   }
@@ -162,7 +167,8 @@ $ ./node_modules/.bin/webpack
 
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "webpack --watch"
+  "start": "webpack --watch",
+  "serve": "Webpack-dev-server --content-base public --inline --hot"
 },
 
 ============================
@@ -193,7 +199,7 @@ THEN ADD TO package.json: "serve": "Webpack-dev-server --content-base public", t
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "start": "webpack --watch",
-  "serve": "Webpack-dev-server --content-base public --inline"
+  "serve": "Webpack-dev-server --content-base public --inline --hot"
 },
 
 $ npm run serve
