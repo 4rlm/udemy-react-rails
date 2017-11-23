@@ -1,6 +1,7 @@
 import React from 'react';
 
 import NameRow from './NameList/NameRow';
+import names from '../../../mock-data';
 
 export default class FilterableNameList extends React.Component {
   constructor() {
@@ -15,7 +16,7 @@ export default class FilterableNameList extends React.Component {
 
   componentWillMount() {
     this.setState({
-      names: this.props.names
+      names: names
     })
   }
 

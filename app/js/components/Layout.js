@@ -1,7 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-import FilterableNameList from './FilterableNameList';
-import Timer from './Timer';
 
 export default class Layout extends React.Component {
   constructor() {
@@ -11,21 +10,22 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
+      <header>
         <h1>Welcome to my site!</h1>
-        <h3>Happy to have you here.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur temporibus distinctio deleniti.</p>
-        <Timer />
-        <H1Styler>
-          <FilterableNameList names={this.props.names} />
-        </H1Styler>
+        <h3>I'm in the header.</h3>
+        <Link to="/timer">Timer</Link>
+      </header>
+
+      {this.props.children}
+
+
+
+      <footer>
+        <h3>in footer</h3>
+      </footer>
+
+
       </div>
     )
   }
-}
-
-const H1Styler = (props) => {
-  const blueBackground = {
-    backgroundColor: "blue"
-  }
-  return <h3 style={blueBackground}>{props.children}</h3>
 }
