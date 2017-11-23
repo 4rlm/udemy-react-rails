@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-
 export default class Layout extends React.Component {
   constructor() {
     super();
@@ -10,21 +9,18 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-      <header>
-        <h1>Welcome to my site!</h1>
-        <h3>I'm in the header.</h3>
-        <Link to="/timer">Timer</Link>
-      </header>
+        <header>
+          <h1>Welcome to my site!</h1>
+          <h3>I'm in the header.</h3>
+          <Link to="/timer">Timer</Link>
+          <Link to="/nameList">Name List</Link>
+        </header>
 
-      {this.props.children}
+        {this.props.children}
 
-
-
-      <footer>
-        <h3>in footer</h3>
-      </footer>
-
-
+        <footer>
+          <h3>in footer</h3>
+        </footer>
       </div>
     )
   }

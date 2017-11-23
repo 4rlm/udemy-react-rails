@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-
 import { Router, Route, browserHistory } from 'react-router';
 
 import Layout from './components/Layout';
@@ -12,6 +11,7 @@ ReactDom.render(
   <Router history={browserHistory}>
     <Route path="/" component={Layout} >
       <Route path="timer" component={Timer} />
+      <Route path="nameList" component={FilterableNameList} />
     </Route>
   </Router>,
   document.getElementById('app')
