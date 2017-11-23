@@ -69,7 +69,11 @@ render() {
 =========================
 
 ==== DEBUG / TOOLS ====
+console.log(typeof id);
+console.log(this.result);
 console.log(this) // Check what 'this' is.  (refers to component itself.)
+{JSON.stringify(this.props)}
+
 Paint Flashing // From Chrome console, ..., More tools, Rendering, Paint Flashing
 
 

@@ -1,153 +1,73 @@
 const names = [{
   "id": 1,
-  "first_name": "Dolf",
-  "last_name": "MacCaffery",
-  "email": "dmaccaffery0@ftc.gov",
-  "gender": "Male"
+  "first_name": "Devland",
+  "last_name": "Milton-White",
+  "email": "dmiltonwhite0@blogtalkradio.com",
+  "gender": "Male",
+  "catch_phrase": "Organized asymmetric internet solution"
 }, {
   "id": 2,
-  "first_name": "Robinet",
-  "last_name": "Kaiser",
-  "email": "rkaiser1@issuu.com",
-  "gender": "Male"
+  "first_name": "Catherin",
+  "last_name": "Hugnet",
+  "email": "chugnet1@constantcontact.com",
+  "gender": "Female",
+  "catch_phrase": "Progressive leading edge service-desk"
 }, {
   "id": 3,
-  "first_name": "Daniella",
-  "last_name": "Towers",
-  "email": "dtowers2@w3.org",
-  "gender": "Female"
+  "first_name": "Carlo",
+  "last_name": "Splaven",
+  "email": "csplaven2@ocn.ne.jp",
+  "gender": "Male",
+  "catch_phrase": "Advanced discrete Graphical User Interface"
 }, {
   "id": 4,
-  "first_name": "Trudy",
-  "last_name": "Housbie",
-  "email": "thousbie3@tamu.edu",
-  "gender": "Female"
+  "first_name": "Aymer",
+  "last_name": "Manilove",
+  "email": "amanilove3@twitpic.com",
+  "gender": "Male",
+  "catch_phrase": "Open-source attitude-oriented alliance"
 }, {
   "id": 5,
-  "first_name": "Verena",
-  "last_name": "Davidovicz",
-  "email": "vdavidovicz4@si.edu",
-  "gender": "Female"
+  "first_name": "Faydra",
+  "last_name": "Buzin",
+  "email": "fbuzin4@archive.org",
+  "gender": "Female",
+  "catch_phrase": "Distributed coherent challenge"
 }, {
   "id": 6,
-  "first_name": "Kimmi",
-  "last_name": "Eckley",
-  "email": "keckley5@patch.com",
-  "gender": "Female"
+  "first_name": "Stanislaw",
+  "last_name": "Barnard",
+  "email": "sbarnard5@redcross.org",
+  "gender": "Male",
+  "catch_phrase": "Digitized mobile workforce"
 }, {
   "id": 7,
-  "first_name": "Sylvia",
-  "last_name": "Annable",
-  "email": "sannable6@kickstarter.com",
-  "gender": "Female"
+  "first_name": "Susy",
+  "last_name": "Heazel",
+  "email": "sheazel6@harvard.edu",
+  "gender": "Female",
+  "catch_phrase": "Compatible secondary flexibility"
 }, {
   "id": 8,
-  "first_name": "Thibaud",
-  "last_name": "Galier",
-  "email": "tgalier7@taobao.com",
-  "gender": "Male"
+  "first_name": "Auria",
+  "last_name": "Dugget",
+  "email": "adugget7@opensource.org",
+  "gender": "Female",
+  "catch_phrase": "Polarised radical middleware"
 }, {
   "id": 9,
-  "first_name": "Binky",
-  "last_name": "Waterman",
-  "email": "bwaterman8@ca.gov",
-  "gender": "Male"
+  "first_name": "Emilie",
+  "last_name": "Nathon",
+  "email": "enathon8@unc.edu",
+  "gender": "Female",
+  "catch_phrase": "Multi-tiered impactful complexity"
 }, {
   "id": 10,
-  "first_name": "Freddie",
-  "last_name": "Duffitt",
-  "email": "fduffitt9@devhub.com",
-  "gender": "Female"
-}, {
-  "id": 11,
-  "first_name": "Diana",
-  "last_name": "Coulbeck",
-  "email": "dcoulbecka@nifty.com",
-  "gender": "Female"
-}, {
-  "id": 12,
-  "first_name": "Raviv",
-  "last_name": "Shutle",
-  "email": "rshutleb@spiegel.de",
-  "gender": "Male"
-}, {
-  "id": 13,
-  "first_name": "Othello",
-  "last_name": "Hassey",
-  "email": "ohasseyc@cnbc.com",
-  "gender": "Male"
-}, {
-  "id": 14,
-  "first_name": "Roderic",
-  "last_name": "Blindermann",
-  "email": "rblindermannd@taobao.com",
-  "gender": "Male"
-}, {
-  "id": 15,
-  "first_name": "Algernon",
-  "last_name": "Beldom",
-  "email": "abeldome@behance.net",
-  "gender": "Male"
-}, {
-  "id": 16,
-  "first_name": "Koralle",
-  "last_name": "Dunthorne",
-  "email": "kdunthornef@123-reg.co.uk",
-  "gender": "Female"
-}, {
-  "id": 17,
-  "first_name": "Avery",
-  "last_name": "Janjic",
-  "email": "ajanjicg@photobucket.com",
-  "gender": "Male"
-}, {
-  "id": 18,
-  "first_name": "Kaiser",
-  "last_name": "Bartlet",
-  "email": "kbartleth@imgur.com",
-  "gender": "Male"
-}, {
-  "id": 19,
-  "first_name": "Donavon",
-  "last_name": "Maypole",
-  "email": "dmaypolei@homestead.com",
-  "gender": "Male"
-}, {
-  "id": 20,
-  "first_name": "Eleanora",
-  "last_name": "Clissell",
-  "email": "eclissellj@irs.gov",
-  "gender": "Female"
-}, {
-  "id": 21,
-  "first_name": "Wilfrid",
-  "last_name": "Luthwood",
-  "email": "wluthwoodk@si.edu",
-  "gender": "Male"
-}, {
-  "id": 22,
-  "first_name": "Isa",
-  "last_name": "Stockey",
-  "email": "istockeyl@simplemachines.org",
-  "gender": "Female"
-}, {
-  "id": 23,
-  "first_name": "Dane",
-  "last_name": "Doring",
-  "email": "ddoringm@e-recht24.de",
-  "gender": "Male"
-}, {
-  "id": 24,
-  "first_name": "Darsey",
-  "last_name": "Shakespeare",
-  "email": "dshakespearen@vimeo.com",
-  "gender": "Female"
-}, {
-  "id": 25,
-  "first_name": "Shirl",
-  "last_name": "Swindall",
-  "email": "sswindallo@opera.com",
-  "gender": "Female"
+  "first_name": "Jori",
+  "last_name": "Philpault",
+  "email": "jphilpault9@moonfruit.com",
+  "gender": "Female",
+  "catch_phrase": "Face to face zero tolerance installation"
 }]
 
 export default names;
