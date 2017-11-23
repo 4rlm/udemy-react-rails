@@ -15,9 +15,17 @@ export default class Layout extends React.Component {
         <h3>Happy to have you here.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur temporibus distinctio deleniti.</p>
         <Timer />
-        <FilterableNameList names={this.props.names} />
-
+        <H1Styler>
+          <FilterableNameList names={this.props.names} />
+        </H1Styler>
       </div>
     )
   }
+}
+
+const H1Styler = (props) => {
+  const blueBackground = {
+    backgroundColor: "blue"
+  }
+  return <h3 style={blueBackground}>{props.children}</h3>
 }
