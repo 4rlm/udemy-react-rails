@@ -1,10 +1,15 @@
 import React from 'react';
 import names from '../../../../mock-data';
 
+
+
 export default class NameProfile extends React.Component {
   constructor() {
     super();
   }
+
+
+
 
   componentWillMount() {
     let {id} = this.props.params;
